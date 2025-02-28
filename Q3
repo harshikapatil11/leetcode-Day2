@@ -1,0 +1,14 @@
+class Solution(object):
+    def canJump(self, nums):
+       i = 0 
+       n = len(nums)
+       goal=0
+
+       for i in range(n):
+            if i <= goal:
+                goal = max(goal, nums[i] + i)
+
+            elif i > goal:
+                return False  
+
+       return True  
