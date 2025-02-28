@@ -1,0 +1,11 @@
+
+Analyze Complexity
+class Solution(object):
+    def rotate(self, nums, k):
+        k = k % len(nums)
+        
+        for i in range(k):
+            remove_element = nums.pop()
+            nums.insert(0, remove_element)
+        
+        return nums
